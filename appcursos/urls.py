@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 """appcursos URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,9 +15,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+>>>>>>> 1cf645511ccce2a3aaa0f0b425a0d46bd540b3be
+from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+<<<<<<< HEAD
+    url(r'^/', include('appdocente.urls')),
+=======
+
+    url(r'^', include('seguridad.urls')),
+    url(r'^', include('alumnos.urls')),
+>>>>>>> 1cf645511ccce2a3aaa0f0b425a0d46bd540b3be
 ]
