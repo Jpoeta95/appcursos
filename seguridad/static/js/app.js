@@ -1,6 +1,6 @@
 function ingresar(){
-    var var1 = $("");
-    var var2 = getElementById("inputPassword").value;
+    var var1 = $("#inputEmail").value;
+   
     alert("hola mundo");
 
 
