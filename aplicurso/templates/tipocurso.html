@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %} Cursos {% endblock %}
+
+{% block contenido %}
+    <h1>TIPO CURSO</h1>
+    <a href="{%url 'inicio' %}">Atras</a> <br>
+    <form action="" method="post">
+      {% csrf_token %}
+      {{formu}}
+      <input type="submit" value="REGISTRAR TIPO" class="btn btn-default">
+    </form>
+    <br>
+
+    <ul>
+      {% for tc in tipocurso %}
+        <li>{{tc.descripciontipocurso}}</li>
+      {% endfor %}
+
+    </ul>
+{% endblock %}
