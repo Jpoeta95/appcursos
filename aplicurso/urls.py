@@ -1,7 +1,8 @@
 from django.conf.urls import url
-from .views import  curso, tipocurso
+from .views import  cursooo, tipocurso, eliminarcurso, actualizarcurso
 urlpatterns = [
-    url(r'^admin/', admin.site.urls), 
     url(r'^addtipo/$', tipocurso),
-    url(r'^addcurso/$', curso),
+    url(r'^addcurso/$', cursooo),
+    url(r'^eliminarcurso/(?P<pk>\d+)$', eliminarcurso),
+    url(r'^addcurso/(?P<pk>\d+)$', actualizarcurso),
 ]

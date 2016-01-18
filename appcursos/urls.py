@@ -6,4 +6,6 @@ urlpatterns = [
     url(r'^', include('appdocente.urls')),
     url(r'^', include('seguridad.urls')),
     url(r'^', include('alumnos.urls')),
+    url(r'^', include('aplicurso.urls')),
+
 ]
