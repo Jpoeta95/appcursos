@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from .models import docente
 from .forms import docenteForm
 
@@ -26,12 +26,13 @@ def actualizardoc(request, pk):
 
         if f.is_valid():
             f.save()
-            return HttpResponseRedirect("'appdocente/docente.html'")
+            return HttpResponseRedirect("/docente")
         else:
             formulario = f
 
     return render(request, 'appdocente/docente.html', {'formu': formulario})
 
-def eliminardoc(request, pk):
-    u = docente.objects.get(pk=int(pk)).delete()
-    return HttpResponseRedirect("appdocente/docente.html")
+def eliminardoc(request, pkd):
+    print("hola jose")
+    u = docente.objects.get(pk=int(pkd)).delete()
+    return HttpResponseRedirect("/docente")
